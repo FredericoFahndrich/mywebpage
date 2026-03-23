@@ -55,7 +55,8 @@
 </div>
 
 <script>
-const API_KEY = "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"; //fred
+
+const API_KEY = "c2stcHJvai1pcnB5SVA4YUhvOTJJM2dTY1dHTm01bHFMX3IzMjdhaTQ0Ql93U2tEVDhYRWY1dXFkSkdfQlpnZDVjOEd3d19BaE11Z2J4aXdJVlQzQmxia0ZKeHZ5UTNKZ01wWk5taUFIZkhJMklrLTdVNmo2MnUyOHEyTEk1UGNpVTMtU0JXbThlZDB6eXBGblpDaVhQMm1wRlZHZ0VNek9KOEE="; //fred
 const MODEL = "gpt-5";
 
 let messages = [];
@@ -142,7 +143,7 @@ function buildApiInput(currentText, fileRefs){
 }
 
 async function sendMessage(){
-  const apiKey = API_KEY;
+  const apiKey = atob(API_KEY);
   const loading = document.getElementById('loading');
   const sendButton = document.querySelector('button[onclick="sendMessage()"]');
   const model = MODEL;
